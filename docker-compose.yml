@@ -16,3 +16,11 @@ services:
     container_name: service_b
     ports:
       - "8001:5001"
+  
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - service_a
+

@@ -5,6 +5,8 @@ import requests
 SERVICE_B_URL = os.getenv("SERVICE_B_URL", "http://service_b:5001")
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False
+
 
 @app.route("/hello")
 def hello():
